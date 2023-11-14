@@ -34,7 +34,7 @@ export const fetchWeatherData = async (id: number): Promise<WeatherData | null> 
 export const addWeatherRecord = async (cityRecord: CityRecord) => {
 
   try {
-    const res = await fetch(`${API_BASE_URL}/addweather`, {
+    const res = await fetch(`${API_BASE_URL}/add`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export const getAllWeatherRecords = async (cityId: number) => {
  */
 export const deleteWeatherRecord = async (cityId: number, timestamp: number): Promise<Response> => {
   try {
-    const res = await fetch(`${API_BASE_URL}/deleterecord`, {
+    const res = await fetch(`${API_BASE_URL}/delete`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

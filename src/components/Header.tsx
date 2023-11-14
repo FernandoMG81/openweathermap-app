@@ -9,9 +9,9 @@ interface HeaderProps {}
  *
  * @component
  *
- * @returns {TSX.Element} Elemento TSX que representa el encabezado de la aplicación.
+ * @returns {JSX.Element} Elemento JSX que representa el encabezado de la aplicación.
  */
-export const Header: React.FC<HeaderProps> = () => {
+export const Header: React.FC<HeaderProps> = (): JSX.Element => {
   return (
     <Box
       bgcolor='primary.main'

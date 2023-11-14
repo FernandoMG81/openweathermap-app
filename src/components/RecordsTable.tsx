@@ -150,7 +150,9 @@ export const RecordsTable = (): JSX.Element => {
     _: React.MouseEvent<HTMLButtonElement> | null,
     newPage: number
   ) => {
-    setPage(newPage);
+    if (newPage >= 0 && newPage <= lastPage) {
+      setPage(newPage);
+    }
   };
 
   const handleChangeRowsPerPage = (
