@@ -1,0 +1,662 @@
+[
+  {
+    "id": 6356055,
+    "name": "Barcelona",
+    "state": "",
+    "country": "ES",
+    "coord": {
+      "lon": 2.12804,
+      "lat": 41.399422
+    }
+  },
+  {
+    "id": 3846616,
+    "name": "Londres",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -67.133492,
+      "lat": -27.71439
+    }
+  },
+  {
+    "id": 5344994,
+    "name": "East Los Angeles",
+    "state": "CA",
+    "country": "US",
+    "coord": {
+      "lon": -118.17202,
+      "lat": 34.023899
+    }
+  },
+  {
+    "id": 1850144,
+    "name": "Tokyo Prefecture",
+    "state": "",
+    "country": "JP",
+    "coord": {
+      "lon": 139.691711,
+      "lat": 35.689499
+    }
+  },
+  {
+    "id": 3436508,
+    "name": "Acassuso",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.50177,
+      "lat": -34.477058
+    }
+  },
+  {
+    "id": 3436397,
+    "name": "Almagro",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.416672,
+      "lat": -34.599998
+    }
+  },
+  {
+    "id": 3436159,
+    "name": "Bancalari",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.600899,
+      "lat": -34.476559
+    }
+  },
+  {
+    "id": 3436109,
+    "name": "Barrio Norte",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.400002,
+      "lat": -34.583328
+    }
+  },
+  {
+    "id": 3436080,
+    "name": "Beccar",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.534809,
+      "lat": -34.46312
+    }
+  },
+  {
+    "id": 3436077,
+    "name": "Belgrano",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.45829,
+      "lat": -34.562698
+    }
+  },
+  {
+    "id": 3436079,
+    "name": "Belén de Escobar",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.793079,
+      "lat": -34.349049
+    }
+  },
+  {
+    "id": 3436048,
+    "name": "Benavídez",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.701389,
+      "lat": -34.411301
+    }
+  },
+  {
+    "id": 3436022,
+    "name": "Billinghurst",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.58559,
+      "lat": -34.579762
+    }
+  },
+  {
+    "id": 3435971,
+    "name": "Boulogne",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.565811,
+      "lat": -34.50732
+    }
+  },
+  {
+    "id": 3435810,
+    "name": "Campana",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.959141,
+      "lat": -34.168739
+    }
+  },
+  {
+    "id": 3435506,
+    "name": "Chacarita",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.452499,
+      "lat": -34.587009
+    }
+  },
+  {
+    "id": 3433955,
+    "name": "Ciudad Autónoma de Buenos Aires",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.450001,
+      "lat": -34.599998
+    }
+  },
+  {
+    "id": 3435356,
+    "name": "Colegiales",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.449242,
+      "lat": -34.57365
+    }
+  },
+  {
+    "id": 3435087,
+    "name": "Del Viso",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.787811,
+      "lat": -34.45013
+    }
+  },
+  {
+    "id": 3435055,
+    "name": "Dique Luján",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.68792,
+      "lat": -34.357189
+    }
+  },
+  {
+    "id": 3435010,
+    "name": "Don Torcuato",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.639149,
+      "lat": -34.496738
+    }
+  },
+  {
+    "id": 3434509,
+    "name": "El Palomar",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.61528,
+      "lat": -34.541672
+    }
+  },
+  {
+    "id": 3434261,
+    "name": "El Talar",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.65086,
+      "lat": -34.470901
+    }
+  },
+  {
+    "id": 3433964,
+    "name": "Fátima",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.986549,
+      "lat": -34.43903
+    }
+  },
+  {
+    "id": 3433844,
+    "name": "Garín",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.749001,
+      "lat": -34.420631
+    }
+  },
+  {
+    "id": 3433787,
+    "name": "General Pacheco",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.64296,
+      "lat": -34.448818
+    }
+  },
+  {
+    "id": 3433708,
+    "name": "Grand Bourg",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.72913,
+      "lat": -34.482361
+    }
+  },
+  {
+    "id": 3433522,
+    "name": "Hurlingham",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.63905,
+      "lat": -34.58831
+    }
+  },
+  {
+    "id": 3433461,
+    "name": "Ingeniero Maschwitz",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.737621,
+      "lat": -34.38839
+    }
+  },
+  {
+    "id": 3433456,
+    "name": "Ingeniero Otamendi",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.86417,
+      "lat": -34.234169
+    }
+  },
+  {
+    "id": 3431204,
+    "name": "Los Cardales",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.984322,
+      "lat": -34.32814
+    }
+  },
+  {
+    "id": 3430975,
+    "name": "Lynch",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.524929,
+      "lat": -34.59256
+    }
+  },
+  {
+    "id": 3430876,
+    "name": "Manzone",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.868252,
+      "lat": -34.484619
+    }
+  },
+  {
+    "id": 3480730,
+    "name": "Maquinista Savio",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.798328,
+      "lat": -34.41111
+    }
+  },
+  {
+    "id": 3430834,
+    "name": "Mariano Moreno",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.929169,
+      "lat": -34.463329
+    }
+  },
+  {
+    "id": 3430813,
+    "name": "Martínez",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.516788,
+      "lat": -34.493969
+    }
+  },
+  {
+    "id": 3430782,
+    "name": "Matheu",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.83292,
+      "lat": -34.385448
+    }
+  },
+  {
+    "id": 3430513,
+    "name": "Muñiz",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.698399,
+      "lat": -34.546749
+    }
+  },
+  {
+    "id": 3430310,
+    "name": "Olivos",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.487019,
+      "lat": -34.507469
+    }
+  },
+  {
+    "id": 3430234,
+    "name": "Palermo",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.430531,
+      "lat": -34.588558
+    }
+  },
+  {
+    "id": 3435809,
+    "name": "Partido de Campana",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.916672,
+      "lat": -34.166672
+    }
+  },
+  {
+    "id": 3429088,
+    "name": "Partido de San Fernando",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.542019,
+      "lat": -34.445419
+    }
+  },
+  {
+    "id": 3428983,
+    "name": "Partido de San Isidro",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.583328,
+      "lat": -34.5
+    }
+  },
+  {
+    "id": 3427753,
+    "name": "Partido de Tigre",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.58279,
+      "lat": -34.420582
+    }
+  },
+  {
+    "id": 3427504,
+    "name": "Partido de Vicente López",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.474388,
+      "lat": -34.523529
+    }
+  },
+  {
+    "id": 3430087,
+    "name": "Paternal",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.471561,
+      "lat": -34.595421
+    }
+  },
+  {
+    "id": 3429959,
+    "name": "Piñero",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.75,
+      "lat": -34.533329
+    }
+  },
+  {
+    "id": 3429576,
+    "name": "Retiro",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.383331,
+      "lat": -34.583328
+    }
+  },
+  {
+    "id": 3429493,
+    "name": "Río Luján",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.92028,
+      "lat": -34.285561
+    }
+  },
+  {
+    "id": 3429316,
+    "name": "San Andrés",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.545292,
+      "lat": -34.563091
+    }
+  },
+  {
+    "id": 3429095,
+    "name": "San Fernando",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.56279,
+      "lat": -34.44104
+    }
+  },
+  {
+    "id": 8015350,
+    "name": "Santa Catalina - Dique Lujan",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.70673,
+      "lat": -34.383751
+    }
+  },
+  {
+    "id": 3427761,
+    "name": "Tigre",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.57962,
+      "lat": -34.426029
+    }
+  },
+  {
+    "id": 3427687,
+    "name": "Tortuguitas",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.759171,
+      "lat": -34.469681
+    }
+  },
+  {
+    "id": 3427505,
+    "name": "Vicente López",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.473701,
+      "lat": -34.529469
+    }
+  },
+  {
+    "id": 3427500,
+    "name": "Victoria",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.546139,
+      "lat": -34.455051
+    }
+  },
+  {
+    "id": 3427478,
+    "name": "Villa Adelina",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.5476,
+      "lat": -34.529751
+    }
+  },
+  {
+    "id": 3427473,
+    "name": "Villa Altube",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.746559,
+      "lat": -34.52647
+    }
+  },
+  {
+    "id": 3427411,
+    "name": "Villa Libertad",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.567268,
+      "lat": -34.5835
+    }
+  },
+  {
+    "id": 3427387,
+    "name": "Villa Ortúzar",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.48333,
+      "lat": -34.583328
+    }
+  },
+  {
+    "id": 3429703,
+    "name": "Villa Pueyrredón",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.5,
+      "lat": -34.583328
+    }
+  },
+  {
+    "id": 3427377,
+    "name": "Villa Rosa",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.871159,
+      "lat": -34.416569
+    }
+  },
+  {
+    "id": 3433775,
+    "name": "Villa Urquiza",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.48333,
+      "lat": -34.566669
+    }
+  },
+  {
+    "id": 3427362,
+    "name": "Villa Zagala",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.537682,
+      "lat": -34.551262
+    }
+  },
+  {
+    "id": 3427453,
+    "name": "Villa de Mayo",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.67952,
+      "lat": -34.504719
+    }
+  },
+  {
+    "id": 3427208,
+    "name": "Zelaya",
+    "state": "",
+    "country": "AR",
+    "coord": {
+      "lon": -58.86977,
+      "lat": -34.370789
+    }
+  }
+]
