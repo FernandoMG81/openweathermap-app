@@ -22,7 +22,7 @@ export const Toast: React.FC<ToastProps> = ({ errorMessage }) => {
  
   return (
     <Snackbar autoHideDuration={8000} open={snackbarOpen}>
-      <Alert severity="error" sx={{ width: "100%" }}>
+      <Alert severity="error" sx={{ width: "100%" }} aria-label='alert-message'>
         {errorMessage.message} - Check your API
       </Alert>
     </Snackbar>
