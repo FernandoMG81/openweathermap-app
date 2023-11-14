@@ -1,8 +1,8 @@
-import { GlobalState, WeatherData } from "../types";
+import { ErrorObject, GlobalState, WeatherData } from "../types";
 
 interface Action {
-  type: "GET_WEATHER" | "GET_ALL_RECORDS";
-  payload: WeatherData | WeatherData[];
+  type: "GET_WEATHER" | "GET_ALL_RECORDS" | "ERROR_OCCURRED";
+  payload: WeatherData | WeatherData[] | ErrorObject;
 }
 /**
  * Reductor para gestionar el estado global relacionado con el clima.
@@ -24,6 +24,7 @@ export const WeatherReducer = (
      */
     case "GET_WEATHER":
       return {
+        error: {message: '', isError: false},
         weatherRecords: null,
         cardWeather: payload as WeatherData,
       };
@@ -35,9 +36,22 @@ export const WeatherReducer = (
     case "GET_ALL_RECORDS": {
       const allRecords = Array.isArray(payload) ? payload : [payload];
       return {
+        error: {message: '', isError: false},
         cardWeather: allRecords[0] as WeatherData,
         weatherRecords: allRecords as WeatherData[],
       };
+    }
+    case "ERROR_OCCURRED": {
+      if ('message' in payload && 'isError' in payload) {
+        return {
+          ...state,
+          error: {
+            message: payload.message,
+            isError: payload.isError,
+          },
+        };
+      }
+      return state;
     }
     /**
      * Caso por defecto: retorna el estado actual.

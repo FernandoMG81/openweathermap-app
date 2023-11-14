@@ -28,8 +28,10 @@ export const WeatherState: React.FC<WeatherStateProps> = ({ children }) => {
   const initialState = {
     cardWeather: null,
     weatherRecords: null,
-    getCityWeather: () => {},
-    //error:
+    error: {
+      isError: false,
+      message: ''
+    }
   };
 
   // Reductor para gestionar el estado global del clima
@@ -63,13 +65,13 @@ export const WeatherState: React.FC<WeatherStateProps> = ({ children }) => {
           const allRecords = await getAllWeatherRecords(cityWeatherID);
           dispatch({ type: "GET_ALL_RECORDS", payload: allRecords });
         } else {
-          //await getCityWeather(cityWeatherID);
           const data = await fetchWeatherData(cityWeatherID);
           if (data) dispatch({ type: "GET_WEATHER", payload: data });
         }
       }
     } catch (error) {
       console.error(error);
+      dispatch({ type: "ERROR_OCCURRED", payload: {isError: true, message: 'Failed to fetch at addWeatherRecord'} })
     } finally {
       setLoading(false);
     }
@@ -101,6 +103,7 @@ export const WeatherState: React.FC<WeatherStateProps> = ({ children }) => {
         addCityWeather,
         deleteCityWeatherRecord,
         loading,
+        error: globalState.error
       }}
     >
       {children}

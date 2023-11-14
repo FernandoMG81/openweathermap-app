@@ -94,8 +94,8 @@ function createData(
   dt: number
 ): Data {
   const date = dt.toString();
-  const feels_like = +_feels_like.toFixed(1)
-  const temp = +_temp.toFixed(1)
+  const feels_like = +_feels_like.toFixed(1);
+  const temp = +_temp.toFixed(1);
   return { country, city, temp, feels_like, humidity, weather_icon, date };
 }
 
@@ -104,16 +104,25 @@ function createData(
  * @returns {JSX.Element} JSX del componente RecordsTable.
  */
 export const RecordsTable = (): JSX.Element => {
+  /**
+   * Estados del componente.
+   *
+   */
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [selectedRow, setSelectedRow] = useState<Data | null>(null);
-  // Acceso al contexto para operaciones relacionadas con el clima
+  /**
+   * Acceso al contexto para operaciones relacionadas con el clima
+   */
   const context = useContext(WeatherContext);
 
+  /**
+   * Efecto que se ejecuta cuando cambian los registros meteorológicos o la ciudad seleccionada.
+   */
   useEffect(() => {
     setPage(0);
-  }, [context?.weatherRecords]);
+  }, [context?.weatherRecords, context?.cardWeather?.cityID]);
 
   const rows = context?.weatherRecords
     ? context.weatherRecords.map((r) => {
@@ -129,32 +138,52 @@ export const RecordsTable = (): JSX.Element => {
       })
     : null;
 
+  /**
+   * Maneja la apertura del modal de eliminación.
+   * @param {Data} row - Fila seleccionada.
+   */
   const handleOpenDeleteModal = (row: Data) => {
     setSelectedRow(row);
     setDeleteModalOpen(true);
   };
 
+  /**
+   * Maneja el cierre del modal de eliminación.
+   */
   const handleCloseDeleteModal = () => {
     setSelectedRow(null);
     setDeleteModalOpen(false);
   };
 
+  /**
+   * Maneja la eliminación del registro.
+   */
   const handleDeleteRecord = () => {
     if (selectedRow) {
-      context?.deleteCityWeatherRecord(context?.cardWeather?.cityID||0, +selectedRow.date);
+      context?.deleteCityWeatherRecord(
+        context?.cardWeather?.cityID || 0,
+        +selectedRow.date
+      );
     }
     handleCloseDeleteModal();
   };
 
+  /**
+   * Maneja el cambio de página.
+   * @param {React.MouseEvent<HTMLButtonElement> | null} _ - Evento de clic.
+   * @param {number} newPage - Nueva página.
+   */
   const handleChangePage = (
     _: React.MouseEvent<HTMLButtonElement> | null,
     newPage: number
   ) => {
-    if (newPage >= 0 && newPage <= lastPage) {
-      setPage(newPage);
-    }
+    setPage(newPage);
   };
 
+  /**
+   * Maneja el cambio de filas por página.
+   * @param {React.ChangeEvent<HTMLInputElement>} event - Evento de cambio.
+   */
   const handleChangeRowsPerPage = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -162,23 +191,24 @@ export const RecordsTable = (): JSX.Element => {
     setPage(0);
   };
 
-  const lastPage = Math.ceil((rows?.length || 0) / rowsPerPage) - 1;
-  if (page > lastPage) {
-    setPage(lastPage);
-  }
-
   if (!context?.weatherRecords) return <></>;
+
+  /**
+   * Retorna JSX para la tabla de registros meteorológicos.
+   * @returns {JSX.Element} JSX de la tabla.
+   */
   return (
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
-          <TableHead>
+          <TableHead  >
             <TableRow>
               {columns.map((column) => (
                 <TableCell
                   key={column.id}
                   align={column.align}
                   style={{ minWidth: column.minWidth }}
+                  sx={{ backgroundColor: 'primary.main', color: 'white'}}
                 >
                   {column.label}
                 </TableCell>
@@ -191,31 +221,38 @@ export const RecordsTable = (): JSX.Element => {
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row, index) => {
                   return (
-                    <TableRow hover role="checkbox" tabIndex={-1} key={index}>
-  {columns.map((column, columnIndex) => (
-    <TableCell key={columnIndex} align={column.align}>
-      {column.id === 'weather_icon' && typeof row[column.id] === 'string' ? (
-        <img
-          src={`${OPEN_WEATHER_BASE_ICONS_URL}${row[column.id]}@4x.png`}
-          alt="Weather Icon"
-          style={{ width: '50px', height: '50px' }}
-        />
-      ) : (
-        column.id === 'date' ? (
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            {convertTime(Number(row[column.id]))}
-            <IconButton onClick={() => handleOpenDeleteModal(row)} color="error">
-              <DeleteForever />
-            </IconButton>
-          </div>
-        ) : (
-          row[column.id]
-        )
-      )}
-    </TableCell>
-  ))}
-</TableRow>
-
+                    <TableRow hover role="checkbox" tabIndex={-1} key={index} sx={{
+                      backgroundColor: index % 2 === 0 ? '#FAF0FC' : '#DCD2DE', // Aplica un color gris claro a las filas impares
+                    }}>
+                      {columns.map((column, columnIndex) => (
+                        <TableCell key={columnIndex} align={column.align}>
+                          {column.id === "weather_icon" &&
+                          typeof row[column.id] === "string" ? (
+                            <img
+                              src={`${OPEN_WEATHER_BASE_ICONS_URL}${
+                                row[column.id]
+                              }@4x.png`}
+                              alt="Weather Icon"
+                              style={{ width: "50px", height: "50px" }}
+                            />
+                          ) : column.id === "date" ? (
+                            <div
+                              style={{ display: "flex", alignItems: "center" }}
+                            >
+                              {convertTime(Number(row[column.id]))}
+                              <IconButton
+                                onClick={() => handleOpenDeleteModal(row)}
+                                color="error"
+                              >
+                                <DeleteForever />
+                              </IconButton>
+                            </div>
+                          ) : (
+                            row[column.id]
+                          )}
+                        </TableCell>
+                      ))}
+                    </TableRow>
                   );
                 })}
           </TableBody>

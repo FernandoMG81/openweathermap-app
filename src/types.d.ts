@@ -41,9 +41,15 @@ export type CityRecord = {
   timestamp: int
 }
 
+export type ErrorObject = {
+  message: string,
+  isError: boolean
+}
+
 export type GlobalState = {
   cardWeather: WeatherData | null;
-  weatherRecords: WeatherData[] | null;
+  weatherRecords: WeatherData[] | null
+  error: ErrorObject
 }
 
 export type CityContextType = {
@@ -52,4 +58,5 @@ export type CityContextType = {
   cardWeather: WeatherData | null;
   weatherRecords: WeatherData[] | null;
   loading: boolean
+  error: ErrorObject
 };
